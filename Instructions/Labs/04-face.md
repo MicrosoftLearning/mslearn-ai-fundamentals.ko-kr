@@ -73,7 +73,7 @@ Azure AI 서비스 다중 서비스 리소스와 **함께 Azure AI Face 서비�
 
     ![얼굴을 가리는 식물이 있는 상점에 있는 사람들의 이미지입니다.](./media/create-face-solutions/store-camera-3.jpg)
 
-1. store-camera-2.jpg** 업로드**하고 반환되는 얼굴 감지 세부 정보를 검토합니다. Azure AI Face가 부분적으로 가려진 얼굴을 감지하는 방법을 확인합니다. 
+1. store-camera-3.jpg** 업로드**하고 반환되는 얼굴 감지 세부 정보를 검토합니다. Azure AI Face가 가려진 얼굴을 감지하지 못한 방법을 확인합니다.
 
 이 연습에서는 Azure AI 서비스가 이미지에서 얼굴을 감지하는 방법을 살펴보세요. 시간이 있는 경우 샘플 이미지 또는 일부 이미지를 자유롭게 사용해 보세요.
 
