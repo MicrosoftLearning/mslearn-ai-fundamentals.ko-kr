@@ -183,7 +183,7 @@ Azure AI Search 리소스와 **** 동일한 위치에 있는 Azure AI 서비스 
     - 인식 기술의 기술 세트를 실행하여 더 많은 보강 필드를 생성합니다.
     - 추출된 필드를 인덱스에 매핑
 
-1. Azure AI Search 리소스에 **대한 개요** 페이지의 아래쪽 절반에서 인덱서** 탭을 **선택합니다. 이 탭에는 새로 만든 **커피 인덱서가 표시됩니다**. 잠시 기다린 후 **상태**가 성공으로 표시될 때까지 **&orarr; 새로 고침**을 선택합니다.
+1. Azure AI Search 리소스 페이지로 돌아갑니다. 왼쪽 창의 검색 관리**에서 **인덱서를** 선택합니다**. 새로 만든 **커피 인덱서** 선택 잠시 기다린 후 **상태**가 성공으로 표시될 때까지 **&orarr; 새로 고침**을 선택합니다.
 
 1. 자세한 내용을 보려면 인덱서 이름을 선택합니다.
 
@@ -197,21 +197,40 @@ Azure AI Search 리소스와 **** 동일한 위치에 있는 Azure AI 서비스 
 
    ![검색 탐색기를 찾는 방법의 스크린샷.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-1. 선택한 인덱스가 앞서 만든 *coffee-index*인지 확인합니다.
+2. 선택한 인덱스가 앞서 만든 *coffee-index*인지 확인합니다. 선택한 인덱스 아래에서 보기를 JSON 보기***로 **변경*합니다. 
 
     ![검색 탐색기의 스크린샷.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-    **쿼리 문자열** 필드에 `search=*&$count=true`를 입력한 다음 **검색**을 선택합니다. 검색 쿼리는 **@odata.count** 필드의 모든 문서 수를 포함하여 검색 인덱스의 모든 문서를 반환합니다. 검색 인덱스에서 검색 결과가 포함된 JSON 문서를 반환합니다.
+**JSON 쿼리 편집기** 필드에서 복사하여 붙여넣습니다. 
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+3. **검색**을 선택합니다. 검색 쿼리는 **@odata.count** 필드의 모든 문서 수를 포함하여 검색 인덱스의 모든 문서를 반환합니다. 검색 인덱스에서 검색 결과가 포함된 JSON 문서를 반환합니다.
 
-    > **참고** **포털에서 검색하려면 인덱스 CORS 설정에서 포털 원본을 허용하세요** 메시지가 표시되면 **포털 허용**을 선택한 다음, **검색**을 선택합니다.
+4. 이제 위치로 필터링해 봅시다. **JSON 쿼리 편집기** 필드에서 복사하여 붙여넣습니다. 
+```json
+{
+    "search": "locations:'Chicago'",
+    "count": true
+}
+```
+5. **검색**을 선택합니다. 쿼리는 인덱스의 모든 문서를 검색하고 시카고 위치의 검토를 필터링합니다. 필드에 표시됩니다 `3` `@odata.count` .
 
-1. 이제 위치로 필터링해 봅시다. **쿼리 문자열** 필드에 `search=locations:'Chicago'`를 입력한 다음 **검색**을 선택합니다. 쿼리는 인덱스의 모든 문서를 검색하고 시카고 위치의 검토를 필터링합니다.
-
-1. 이제 감정으로 필터링해 봅시다. **쿼리 문자열** 필드에 `search=sentiment:'negative'`를 입력한 다음 **검색**을 선택합니다. 쿼리는 인덱스의 모든 문서를 검색하고 부정적인 감정의 검토를 필터링합니다.
+6. 이제 감정으로 필터링해 봅시다. **JSON 쿼리 편집기** 필드에서 복사하여 붙여넣습니다. 
+```json
+{
+    "search": "sentiment:'negative'",
+    "count": true
+}
+```
+7. **검색**을 선택합니다. 쿼리는 인덱스의 모든 문서를 검색하고 부정적인 감정의 검토를 필터링합니다. 필드에 표시됩니다 `1` `@odata.count` .
 
    > **참고** 결과가 `@search.score`를 기준으로 정렬되는 방법을 확인하세요. 이는 결과가 지정한 쿼리와 일치하는 정도를 표시하기 위해 검색 엔진에서 할당한 점수입니다.
 
-1. 해결하려는 문제 중 하나는 특정 리뷰가 있을 수 있는 이유입니다. 부정적인 리뷰와 관련된 핵심 구를 살펴보겠습니다. 리뷰의 원인이 무엇이라고 생각하나요?
+8. 해결하려는 문제 중 하나는 특정 리뷰가 있을 수 있는 이유입니다. 부정적인 리뷰와 관련된 핵심 구를 살펴보겠습니다. 리뷰의 원인이 무엇이라고 생각하나요?
 
 ## 지식 저장소 검토
 
@@ -219,36 +238,36 @@ Azure AI Search 리소스와 **** 동일한 위치에 있는 Azure AI 서비스 
 
 1. Azure Portal에서 Azure Storage 계정으로 돌아갑니다.
 
-1. 왼쪽 메뉴 창에서 **컨테이너**를 선택합니다. **knowledge-store** 컨테이너를 선택합니다.
+2. 왼쪽 메뉴 창에서 **컨테이너**를 선택합니다. **knowledge-store** 컨테이너를 선택합니다.
 
     ![knowledge-store 컨테이너의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-1. 항목 하나를 선택하고 **objectprojection.json** 파일을 클릭합니다.
+3. 항목 하나를 선택하고 **objectprojection.json** 파일을 클릭합니다.
 
     ![objectprojection.json의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
-1. **편집**을 선택하여 Azure 데이터 저장소의 문서 중 하나에 대해 생성된 JSON을 확인합니다.
+4. **편집**을 선택하여 Azure 데이터 저장소의 문서 중 하나에 대해 생성된 JSON을 확인합니다.
 
     ![편집 단추를 찾는 방법의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-2.png)
 
-1. 화면 왼쪽 위에 있는 스토리지 Blob 이동 경로를 선택하여 스토리지 계정 컨테이너로 돌아갑니다.**
+5. 화면 왼쪽 위에 있는 스토리지 Blob 이동 경로를 선택하여 스토리지 계정 컨테이너로 돌아갑니다.**
 
     ![스토리지 Blob 이동 경로의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 
-1. *컨테이너*에서 *coffee-skillset-image-projection* 컨테이너를 선택합니다. 항목을 하나 선택합니다.
+6. *컨테이너*에서 *coffee-skillset-image-projection* 컨테이너를 선택합니다. 항목을 하나 선택합니다.
 
     ![기술 세트 컨테이너의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
 
-1. *.jpg* 파일을 하나 선택합니다. **편집**을 선택하여 문서에서 저장된 이미지를 확인합니다. 문서의 모든 이미지가 이러한 방식으로 저장됩니다.
+7. *.jpg* 파일을 하나 선택합니다. **편집**을 선택하여 문서에서 저장된 이미지를 확인합니다. 문서의 모든 이미지가 이러한 방식으로 저장됩니다.
 
     ![저장된 이미지의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-3.png)
 
-1. 화면 왼쪽 위에 있는 스토리지 Blob 이동 경로를 선택하여 스토리지 계정 컨테이너로 돌아갑니다.**
+8. 화면 왼쪽 위에 있는 스토리지 Blob 이동 경로를 선택하여 스토리지 계정 컨테이너로 돌아갑니다.**
 
-1. 왼쪽 패널에서 **스토리지 브라우저**를 선택하고 **테이블**을 선택합니다. 인덱스의 각 엔터티에 대한 테이블이 있습니다. *coffeeSkillsetKeyPhrases* 테이블을 선택합니다.
+9. 왼쪽 패널에서 **스토리지 브라우저**를 선택하고 **테이블**을 선택합니다. 인덱스의 각 엔터티에 대한 테이블이 있습니다. *coffeeSkillsetKeyPhrases* 테이블을 선택합니다.
 
     지식 저장소가 리뷰의 콘텐츠에서 캡처할 수 있었던 핵심 구를 살펴보세요. 대부분의 필드가 키이므로 관계형 데이터베이스처럼 테이블을 연결할 수 있습니다. 마지막 필드는 기술 세트가 추출한 핵심 구를 표시합니다.
 
 ## 자세한 정보
 
-이 간단한 검색은 Azure AI Search 서비스의 일부 기능만 인덱싱합니다. 이 서비스를 사용하여 수행할 수 있는 작업을 자세히 알아보려면 Azure AI Search 서비스 페이지를 참조 [하세요](/azure/search/search-what-is-azure-search).
+이 간단한 검색은 Azure AI Search 서비스의 일부 기능만 인덱싱합니다. 이 서비스를 사용하여 수행할 수 있는 작업을 자세히 알아보려면 Azure AI Search 서비스 페이지를 참조 [하세요](https://learn.microsoft.com/azure/search).
