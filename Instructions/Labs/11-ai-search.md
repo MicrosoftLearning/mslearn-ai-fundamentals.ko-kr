@@ -124,7 +124,7 @@ Azure AI 검색 리소스와 동일한 위치에 있는 **Azure AI 서비스** �
 
 1. **다음: 인식 기술 추가(선택 사항)** 를 선택합니다.
 
-1. **Cognitive Services 연결** 섹션에서 Cognitive Services 리소스를 선택합니다.  
+1. **AI 서비스 연결** 섹션에서 Azure AI 서비스 리소스를 선택합니다.  
 
 1. **보강 추가** 섹션에서 다음을 수행합니다.
     - **기술 세트 이름**을 **coffee-skillset** 변경합니다.
@@ -156,7 +156,8 @@ Azure AI 검색 리소스와 동일한 위치에 있는 **Azure AI 서비스** �
     >
     > !['기존 연결 선택'이 선택된 스토리지 계정 연결 화면 경고를 보여 주는 스크린샷.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
-    > 1. **기존 연결 선택**을 선택합니다. 앞에서 만든 스토리지 계정을 선택합니다.
+
+1. **기존 연결 선택**을 선택합니다. 앞에서 만든 스토리지 계정을 선택합니다.
     > 1. + 컨테이너를 클릭하여 개인 정보 수준이 프라이빗으로 설정된 knowledge-store라는 새 컨테이너를 만들고 만들기를 선택합니다.
     > 1. **knowledge-store** 컨테이너를 선택하고 화면 맨 아래에 있는 선택을 클릭합니다.
 
@@ -166,7 +167,7 @@ Azure AI 검색 리소스와 동일한 위치에 있는 **Azure AI 서비스** �
 
 1. **키**가 **metadata_storage_path**로 설정되었는지 확인합니다. 비어 있는 **제안기 이름**과 자동으로 채워진 **검색 모드**를 그대로 둡니다.
 
-1. 인덱스 필드의 기본 설정을 검토합니다. 이미 기본적으로 선택된 모든 필드에 대해 **필터링 가능**을 선택합니다.
+1. 인덱스 필드의 기본 설정을 검토합니다. 이미 기본적으로 선택된 모든 필드에 대해 **필터링 가능**을 선택합니다. *필터링 가능*으로 표시해야 하는 필드 이름에는 content, locations, keyphrases, sentiment, merged_content, text, layoutText, imageTags, imageCaption이 있습니다.
 
     ![인덱스 이름이 입력되고 기본 인덱스 필드에 대해 '필터링 가능'이 선택된 인덱스 사용자 지정 창을 보여 주는 스크린샷.](media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 
@@ -238,11 +239,11 @@ Azure AI 검색 리소스와 동일한 위치에 있는 **Azure AI 서비스** �
 
 1. Azure Portal에서 Azure Storage 계정으로 돌아갑니다.
 
-2. 왼쪽 메뉴 창에서 **컨테이너**를 선택합니다. **knowledge-store** 컨테이너를 선택합니다.
+2. 왼쪽 메뉴 창에서 **컨테이너**를 선택합니다. **knowledge-store** 컨테이너를 선택합니다. 
 
     ![knowledge-store 컨테이너의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. 항목 하나를 선택하고 **objectprojection.json** 파일을 클릭합니다.
+3. 폴더 목록이 표시됩니다. 각 리뷰 문서에 대한 모든 메타데이터에 대해 하나의 폴더가 있습니다. **폴더를 선택합니다**. 폴더 내에서 **objectprojection.json** 파일을 클릭합니다.
 
     ![objectprojection.json의 스크린샷.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
