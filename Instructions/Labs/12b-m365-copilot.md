@@ -40,7 +40,7 @@ lab:
     How do I setup a new business in New York?
     ```
 
-1. 응답을 검토하고 필요에 따라 추가 질문을 합니다. 응답이 만족스러우면 응답 아래에 있는 **복사**(&#128461;) 아이콘을 사용하여 응답을 클립보드에 복사합니다. Word 문서에 붙여넣고 모든 텍스트를 선택한 다음 Copilot 아이콘을 선택하여 텍스트를 표로 시각화합니다.
+1. 응답을 검토하고 필요에 따라 추가 질문을 합니다. 응답이 만족스러우면 응답 아래에 있는 **복사**(&#128461;) 아이콘을 사용하여 응답을 클립보드에 복사합니다. Word 문서에 붙여넣고 모든 텍스트를 선택한 다음, 선택한 텍스트의 맨 아래에 있는 Copilot 아이콘을 선택하여 텍스트를 테이블로 시각화합니다.
 
     ![Copilot에게 표 형식으로 시각화하도록 요청하는 것을 보여 주는 스크린샷.](./media/generative-ai/copilot-rewrite-as-table.png)
 
@@ -75,44 +75,36 @@ lab:
 
     ![Copilot이 생성한 사업 계획이 포함된 Word 문서의 스크린샷.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
-1. 사업 계획의 재무 계획이 표 형식이 아닌 경우 해당 형식을 선택하고 Copilot을 사용하여 계획을 표로 시각화합니다.
+1. 비즈니스 계획의 재무 예측 형식이 테이블로 지정되지 않은 경우 이를 선택하고 Copilot을 사용하여 프로젝션을 테이블로 시각화합니다.
 1. 재무 계획표를 선택하고 클립보드에 복사합니다.
-1. Word 문서를 저장합니다.
+1. Word 문서를 저장한 다음 닫습니다.
 
 ## Copilot for Excel에서 재무 계획 시각화
 
 사업 계획이 준비되어 있으면 재무 계획에 대한 데이터 중 일부를 선택하고 Excel의 Copilot에 해당 데이터를 시각화하도록 요청하여 투자자에게 보여 줄 이메일 또는 프레젠테이션에 포함시킬 수 있습니다.
 
-1. Microsoft 365 앱이 설치된 PC에서 **Excel**을 열고 비어 있는 통합 문서를 새로 만듭니다. 즉시 통합 문서를 **Financial Projetions.xlsx**로 OneDrive에 저장합니다. 그렇지 않으면 Copilot이 작동하지 않습니다.
+1. **Excel**을 열고 새 빈 통합 문서를 만듭니다. 통합 문서를 **Financial Projections.xlsx**로 OneDrive에 즉시 저장하지 않으면 Copilot이 작동하지 않습니다.
 1. **Business Idea.docx**의 판매 계획표를 Excel 스프레드시트에 붙여넣고 **표 형식으로 지정**합니다. 방법:
     1. 데이터 내에서 **셀**을 선택합니다.
     1. **홈**을 선택하고 스타일 아래에서 **표 형식**을 선택합니다. 
     1. 표 스타일을 선택합니다.
     1. **표 만들기** 대화 상자에서 셀 범위를 확인하거나 설정합니다.
     1. 표에 헤더가 있는지 표시하고 **확인**을 선택합니다.
-1. 판매 계획을 테이블 형식으로 지정하고 Excel 리본에서 Copilot 창을 열고 다음 프롬프트를 입력합니다.
+1. 판매 예측을 테이블 형식으로 지정한 상태에서 Excel 리본의 **홈** 탭에서 Copilot 창을 열고 다음 프롬프트를 입력합니다.
 
     ```
     Suggest ways to visualize these financial projections.
     ```
     
-1. Copilot은 데이터를 시각화하는 한두 가지 방법을 제공하고 새 시트에 피벗 차트를 추가하도록 제공해야 합니다.
+1. Copilot은 데이터를 시각화하는 방법을 제안하고 피벗 차트를 새 시트에 추가할 것을 제안해야 합니다.
 
     ![Excel의 Copilot에서 재무 계획을 시각화하는 것을 보여 주는 스크린샷.](./media/generative-ai/copilot-excel-visualize-projections.png)
-
-1. 그러나 전년 대비 변화를 표시하기 위해 차트에서 더 많은 데이터를 보고 싶을 수 있으므로 더 추가하려면 다음 프롬프트를 입력합니다.
-
-    ```
-    Visualize these financial projections in a line chart to show year-over-year revenue and profits.
-    ```
-
-    ![Excel의 Copilot에서 재무 계획을 시각화하는 것을 보여 주는 스크린샷.](./media/generative-ai/copilot-excel-visualize-more.png)
 
 1. 새 시트에 피벗 차트를 추가하고 엽니다. 차트를 선택한 다음 **디자인**을 선택하여 스타일을 적용하고 차트 종류 및 기타 작업을 변경합니다. 결국에는 다음과 유사한 것이 있어야 합니다.
 
     ![Excel의 Copilot이 피벗 차트를 추가하는 것을 보여 주는 스크린샷.](./media/generative-ai/copilot-excel-chart-design.png)
 
-1. 파일을 OneDrive에 저장하고 Excel을 닫습니다.
+1. 통합 문서를 저장하고 Excel을 닫습니다.
 
 방금 Word의 Copilot에서 만들어진 데이터를 사용하여 Excel에서 시각화했습니다. 다음 연습에서는 Outlook의 Copilot을 사용하여 수행한 작업에 대한 이메일을 작성하고 보내는 방법을 살펴보겠습니다.
 
@@ -120,14 +112,20 @@ lab:
 
 비즈니스를 시작하는 데 도움이 되는 몇 가지 참고 자료를 만들었습니다. 이제 스타트업 자금을 제공하려는 투자자에게 연락할 시간입니다.
 
-1. Microsoft 365 앱이 설치된 PC에서 **Outlook**을 엽니다. Microsoft 365 계정으로 Outlook을 설정하지 않은 경우 [Outlook 설정 및 사용 - Microsoft 지원](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa)을 참조하세요.
-1. **새 Outlook** 환경을 설정합니다. Outlook의 최신 Copilot 기능을 얻으려면 "새 Outlook" 환경을 사용해야 합니다. 사용 중인 버전을 확인하려면 [사용 중인 Outlook 버전은 무엇인가요? - Microsoft 지원](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c)를 참조하세요..
+1. **Outlook**을 엽니다. Microsoft 365 계정으로 Outlook을 설정하지 않은 경우 이렇게 합니다.
+
+    > **팁**: 이에 대한 도움말은 [Outlook 설정 및 사용 - Microsoft 지원](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa)을 참조하세요.
+
+1. 도구 모음에서 아직 활성화되지 않은 경우 **새 Outlook** 환경으로 전환합니다.
+
+    > **참고**: Outlook의 최신 Copilot 기능을 얻으려면 "새 Outlook" 환경을 사용해야 합니다. 사용 중인 버전을 확인하려면 [사용 중인 Outlook 버전은 무엇인가요? - Microsoft 지원](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c)를 참조하세요..
+
 1. 새 이메일을 작성하고 **받는 사람** 상자에 고유의 이메일 주소를 입력합니다.
 1. Copilot 창이나 이메일 본문 내에서 바로 이메일 초안 작성을 시작할 수 있습니다.
 
     ![Outlook에서 Copilot을 사용하여 이메일 초안을 작성하는 옵션의 스크린샷.](./media/generative-ai/copilot-draft-email-outlook.png)
     
-1. 다음 프롬프트를 입력하고 톤을 "정중한"으로, 길이를 "중간"으로 조정합니다.
+1. 다음 프롬프트를 입력하고 옵션을 조정하여 톤을 "Formal(정식)"으로, 길이를 "Medium(보통)"으로 설정합니다.
 
     ```
     Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
@@ -160,11 +158,7 @@ Copilot의 도움으로 청소 사업 아이디어에 대한 사업 계획 초�
 
     ![Word 문서에서 Copilot으로 만든 PowerPoint 프레젠테이션의 스크린샷.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. 프레젠테이션에서 두 번째 마지막 슬라이드를 선택합니다. 그런 다음 Copilot 창에서 다음 프롬프트를 사용하여 새 슬라이드를 추가하도록 요청합니다.
-
-    ```
-    Add a slide that describes the benefits of an eco-friendly approach to cleaning. 
-    ```
+1. 프레젠테이션에서 두 번째 마지막 슬라이드를 선택합니다. 그런 다음, Copilot 창에서 **슬라이드 정보 추가...** 프롬프트를 사용하여 `the benefits of an eco-friendly approach to cleaning.`에 대한 새 슬라이드를 만듭니다.
 
     ![PowerPoint 프레젠테이션의 새 슬라이드를 만드는 방법을 보여 주는 스크린샷.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
