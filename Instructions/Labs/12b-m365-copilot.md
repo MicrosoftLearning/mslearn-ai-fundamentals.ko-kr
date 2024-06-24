@@ -75,7 +75,7 @@ lab:
 
     ![Copilot이 생성한 사업 계획이 포함된 Word 문서의 스크린샷.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
-1. 비즈니스 계획의 재무 예측 형식이 테이블로 지정되지 않은 경우 이를 선택하고 Copilot을 사용하여 프로젝션을 테이블로 시각화합니다.
+1. 비즈니스 계획의 재무 예측 형식이 테이블로 지정되지 않은 경우 해당 예측을 선택하고 Copilot을 사용하여 예측을 테이블로 시각화합니다.
 1. 재무 계획표를 선택하고 클립보드에 복사합니다.
 1. Word 문서를 저장한 다음 닫습니다.
 
@@ -114,7 +114,7 @@ lab:
 
 1. **Outlook**을 엽니다. Microsoft 365 계정으로 Outlook을 설정하지 않은 경우 이렇게 합니다.
 
-    > **팁**: 이에 대한 도움말은 [Outlook 설정 및 사용 - Microsoft 지원](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa)을 참조하세요.
+    > **팁**: 관련 도움말은 [Outlook 설정 및 사용 - Microsoft 지원](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa)을 참조하세요.
 
 1. 도구 모음에서 아직 활성화되지 않은 경우 **새 Outlook** 환경으로 전환합니다.
 
@@ -125,7 +125,7 @@ lab:
 
     ![Outlook에서 Copilot을 사용하여 이메일 초안을 작성하는 옵션의 스크린샷.](./media/generative-ai/copilot-draft-email-outlook.png)
     
-1. 다음 프롬프트를 입력하고 옵션을 조정하여 톤을 "Formal(정식)"으로, 길이를 "Medium(보통)"으로 설정합니다.
+1. 다음 프롬프트를 입력하고 옵션을 조정하여 톤을 "정중한"으로, 길이를 "중간"으로 설정합니다.
 
     ```
     Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
