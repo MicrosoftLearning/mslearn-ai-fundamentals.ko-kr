@@ -64,7 +64,7 @@ Azure Machine Learning 작업 영역에 액세스하려면 먼저 Azure 구독�
             - **데이터 저장소 형식**: Azure Blob Storage
             - **이름**: workspaceblobstore
         - **MLtable 선택**:
-            - **폴더 업로드**: ** 에서 업로드해야 하는 두 개의 파일이 포함된 폴더 다운로드 `https://aka.ms/bike-rentals`
+            - **폴더 업로드**: *업로드해야 하는 두 파일이 포함된 폴더를 다운로드하고 압축을 풉니다.* `https://aka.ms/bike-rentals` 
 
         **만들기**를 실행합니다. 데이터 세트가 만들어진 후 **bike-rentals** 데이터 세트를 선택하여 계속해서 자동화된 ML 작업을 제출합니다.
 
@@ -145,29 +145,31 @@ Azure Machine Learning 작업 영역에 액세스하려면 먼저 Azure 구독�
 
 1. **실시간 엔드포인트를 테스트할 입력 데이터** 창에서 템플릿 JSON을 다음 입력 데이터로 바꿉니다.
 
-    ```JSON
+    ```json
     {
-      "Inputs": { 
-        "data": [
-          {
-            "day": 1,
-            "mnth": 1,   
-            "year": 2022,
-            "season": 2,
-            "holiday": 0,
-            "weekday": 1,
-            "workingday": 1,
-            "weathersit": 2, 
-            "temp": 0.3, 
-            "atemp": 0.3,
-            "hum": 0.3,
-            "windspeed": 0.3 
-          }
-        ]    
-      },   
-      "GlobalParameters": 1.0
+      "input_data": {
+        "columns": [
+            {
+                "day": 1,
+                "mnth": 1,   
+                "year": 2022,
+                "season": 2,
+                "holiday": 0,
+                "weekday": 1,
+                "workingday": 1,
+                "weathersit": 2, 
+                "temp": 0.3, 
+                "atemp": 0.3,
+                "hum": 0.3,
+                "windspeed": 0.3 
+            }
+        ],
+        "index": [],
+        "data": []
+      }
     }
     ```
+
 
 1. **테스트** 단추를 클릭합니다.
 
