@@ -35,9 +35,7 @@ Azure AI 서비스를 애플리케이션에 통합하려면 개발자에게 서�
 
 먼저 Azure AI 파운드리 프로젝트를 만들어 보겠습니다.
 
-1. 웹 브라우저에서 [Azure AI 파운드리 포털](https://ai.azure.com)(`https://ai.azure.com`)을 열고 Azure 자격 증명을 사용하여 로그인합니다. 처음 로그인할 때 열리는 팁이나 빠른 시작 창을 닫고, 필요한 경우 왼쪽 위에 있는 **Azure AI 파운드리** 로고를 사용하여 다음 이미지와 유사한 홈페이지로 이동합니다(**도움말** 창이 열려 있는 경우 닫습니다).
-
-    ![에이전트 만들기를 선택한 Azure AI 파운드리 홈페이지 스크린샷.](./media/azure-ai-foundry-home-page.png)
+1. 웹 브라우저에서 [Azure AI 파운드리 포털](https://ai.azure.com)(`https://ai.azure.com`)을 열고 Azure 자격 증명을 사용하여 로그인합니다. 처음 로그인할 때 열리는 팁이나 빠른 시작 창을 닫습니다.
  
 1. 새 브라우저 창에서 [Azure AI 서비스 탐색 페이지](https://ai.azure.com/explore/aiservices)를 엽니다.
 
