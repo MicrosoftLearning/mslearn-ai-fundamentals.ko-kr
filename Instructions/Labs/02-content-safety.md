@@ -33,13 +33,11 @@ Azure AI 서비스를 애플리케이션에 통합하려면 개발자에게 서�
 
 ## 실제 작동 중인 Azure AI 서비스 보기
 
-1. 브라우저 탭에서 [Azure AI 파운드리](https://ai.azure.com?azure-portal=true)로 이동합니다.
+먼저 Azure AI 파운드리 프로젝트를 만들어 보겠습니다.
 
-1. 사용자 계정으로 로그인합니다. 
-
-1. *프로젝트 외부에서 작업*에서 **AI 서비스 보기** 타일을 선택합니다.
+1. 웹 브라우저에서 [Azure AI 파운드리 포털](https://ai.azure.com)(`https://ai.azure.com`)을 열고 Azure 자격 증명을 사용하여 로그인합니다. 처음 로그인할 때 열리는 팁이나 빠른 시작 창을 닫습니다.
  
-    ![AI 서비스를 선택한 프로젝트 화면의 왼쪽 메뉴 스크린샷.](./media/view-ai-foundry-outside-project.png)  
+1. 새 브라우저 창에서 [Azure AI 서비스 탐색 페이지](https://ai.azure.com/explore/aiservices)를 엽니다.
 
 1. *AI 서비스* 페이지에서 *비전 + 문서* 타일을 선택하여 Azure AI 비전 및 문서 기능을 시도합니다.
 
@@ -64,12 +62,4 @@ Azure AI 서비스를 애플리케이션에 통합하려면 개발자에게 서�
 ## 정리 
 
 완료한 후에는 Azure Portal에서 Azure AI 서비스 리소스를 삭제할 수 있습니다. 리소스를 삭제하면 리소스가 구독에 있을 때 발생하는 비용을 줄일 수 있습니다. 이렇게 하려면 Azure AI 서비스 리소스의 **개요** 페이지로 이동합니다. 화면 상단에서 **배포**를 선택합니다.
-
-
-
-
-
-
-
-
 
